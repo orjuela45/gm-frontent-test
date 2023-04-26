@@ -7,11 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListarCursosComponent } from './listar-cursos/listar-cursos.component';
 import { CursoService } from './shared/curso.service';
+import { CrearCursosComponent } from './crear-cursos/crear-cursos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListarCursosComponent
+    ListarCursosComponent,
+    CrearCursosComponent
   ],
   imports: [
     BrowserModule,

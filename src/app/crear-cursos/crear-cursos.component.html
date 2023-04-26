@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h1>Crear/editar curso</h1>
+  <div class="col-sm-5">
+    <form (ngSubmit)="onSubmit()" #cursoForm="ngForm">
+      <fieldset class="form-group my-3">
+        <div class="col-sm-12">
+          <label class="control-label" for="nombre">Nombre</label>
+          <input type="text" class="form-control" required [(ngModel)]="curso.nombre" name="nombre">
+        </div>
+      </fieldset>
+      <fieldset class="form-group my-3">
+        <div class="col-sm-12">
+          <label class="control-label" for="fechaInicio">Fecha de inicio</label>
+          <input type="date" class="form-control" required [(ngModel)]="curso.fechaInicio" name="fechaInicio">
+        </div>
+      </fieldset>
+      <fieldset class="form-group my-3">
+        <div class="col-sm-12">
+          <label class="control-label" for="fechaFin">Fecha de finalización</label>
+          <input type="date" class="form-control" required [(ngModel)]="curso.fechaFin" name="fechaFin">
+        </div>
+      </fieldset>
+      <fieldset class="form-group my-3">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary" [disabled]="!cursoForm.form.valid">Enviar</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

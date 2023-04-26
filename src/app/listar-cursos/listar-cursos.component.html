@@ -1,1 +1,29 @@
-<p>listar-cursos works!</p>
+<div class="container mt-5">
+  <h1>Lista de cursos</h1>
+  <a class="btn btn-success" [routerLink]="['/cursos/crear']">Crear nuevo curso</a>
+  <table class="table" id="taskTable">
+    <thead class="thead">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Fecha de inicio</th>
+        <th scope="col">Fecha de finalización</th>
+        <th scope="col">Acción</th>
+      </tr>
+      <tr *ngFor="let curso of cursos | async">
+        <td>{{curso.id}}</td>
+        <td>{{curso.nombre}}</td>
+        <td>{{curso.fechaInicio}}</td>
+        <td>{{curso.fechaFin}}</td>
+        <td class="row">
+          <fieldset class="from-group col-auto">
+            <a class="btn btn-primary" [routerLink]="['/cursos/editar', curso.id]">Actualizar</a>
+          </fieldset>
+          <fieldset class="from-group col-auto">
+            <a class="btn btn-danger" (click)="deleteCurso(curso.id)">Borrar</a>
+          </fieldset>
+        </td>
+      </tr>
+    </thead>
+  </table>
+</div>

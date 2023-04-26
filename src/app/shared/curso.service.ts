@@ -7,7 +7,7 @@ import { CursoModel } from './curso.model';
 })
 export class CursoService {
 
-  BASE_URL = 'http://localhost/8000/api'
+  BASE_URL = 'http://localhost:8000/api'
 
   constructor(
     private http: HttpClient
