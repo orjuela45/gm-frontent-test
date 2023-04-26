@@ -1,27 +1,19 @@
-# GmFrontentTest
+# Grupo marcos frontend test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+Hola, esta es una prueba tecnica para grupo marcos haciendo uso de Angular, espero la prueba cumpla con lo requerido:
 
-## Development server
+## Para tener en cuenta
+Para poder usar este proyecto se debe primero ejecutar el proyecto de laravel y tener en cuenta en cuenta cual es el puerto que esta haciendo uso
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Instrucciones
 
-## Code scaffolding
+1. Descargar el repositorio con git clone
+2. Entrar a la carpeta descargada e instalar los paquetes de node con el comando __npm i__
+3. En el archivo \src\app\shared\curso.service.ts en la linea 10, se debe cambiar el puerto 8000 por el que esta haciendo uso laravel.
+4. Si se va a hacer uso del proyecto en modo de desarrollo ejecutar el comando __ng serve__ (Recomiendo esta)
+5. Si se va a hacer uso del proyecto en modo produccion se debe hacer lo siguiente:
+5.1 Instalar el paquete http-server para poder montar un servidor local (recomiendo leer esta pagina para ver como funciona https://www.npmjs.com/package/http-server)
+5.2 Ejecutar el comando __ng build__ para construir los archivos
+5.3 En la carpeta ./dist generada ejecutar el comando __http-server -o__ 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Con esto ya tendremos el proyecto de frontend ejecutandose y haciendo uso de la api de laravel
